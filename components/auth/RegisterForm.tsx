@@ -103,6 +103,7 @@ export function RegisterForm({ onLoginPress }: RegisterFormProps) {
                     </Button>
                 </XStack>
                 <Button
+                    fontSize="$5"
                     backgroundColor="#272835"
                     color="white"
                     onPress={handleRegister}
@@ -110,6 +111,7 @@ export function RegisterForm({ onLoginPress }: RegisterFormProps) {
                     Register
                 </Button>
                 <Button
+                    fontSize="$5"
                     backgroundColor="white"
                     borderColor="$gray5"
                     borderWidth={1}

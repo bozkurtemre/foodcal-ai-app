@@ -42,6 +42,7 @@ export function SocialAuthButtons() {
             </XStack>
             <Button
                 icon={<GoogleIcon />}
+                fontSize="$5"
                 backgroundColor="white"
                 borderColor="$gray5"
                 borderWidth={1}
@@ -52,6 +53,7 @@ export function SocialAuthButtons() {
             </Button>
             <Button
                 icon={<AppleIcon />}
+                fontSize="$5"
                 backgroundColor="black"
                 color="white"
                 onPress={() => handleSocialLogin('apple')}

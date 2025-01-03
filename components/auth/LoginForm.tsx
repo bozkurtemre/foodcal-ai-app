@@ -70,6 +70,7 @@ export function LoginForm({ onRegisterPress }: LoginFormProps) {
                     Forgot Password?
                 </Text>
                 <Button
+                    fontSize="$5"
                     backgroundColor="#272835"
                     color="white"
                     onPress={handleLogin}
@@ -77,6 +78,7 @@ export function LoginForm({ onRegisterPress }: LoginFormProps) {
                     Login
                 </Button>
                 <Button
+                    fontSize="$5"
                     backgroundColor="white"
                     borderColor="$gray5"
                     borderWidth={1}
