@@ -14,7 +14,7 @@ export default function Auth() {
     }
 
     return (
-        <YStack f={1} jc="center" ai="center" p="$4" space="$4">
+        <YStack f={1} jc="center" ai="center" space="$4">
             {isLogin ? (
                 <LoginForm onRegisterPress={() => setIsLogin(false)} />
             ) : (

@@ -37,8 +37,8 @@ export function SocialAuthButtons() {
         <YStack space="$4" w="100%">
             <XStack alignItems="center" space="$2">
                 <Stack height={1} bg="$gray10" flex={1} />
-                <Text color="$gray11">or continue with</Text>
-                <Stack height={1} bg="$gray10" flex={1} />
+                <Text color="$gray12" fos="$5">or continue with</Text>
+                <Stack height={1} bg="$gray11" flex={1} />
             </XStack>
             <Button
                 icon={<GoogleIcon />}

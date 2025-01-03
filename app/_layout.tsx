@@ -58,7 +58,7 @@ function RootLayoutNav() {
   const theme = useTheme()
   return (
     <ThemeProvider value={DefaultTheme}>
-      <StatusBar barStyle={'dark-content'} />
+      <StatusBar barStyle={'light-content'} />
       <Stack
         screenOptions={{
           headerShown: false,

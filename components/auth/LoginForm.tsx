@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button, Input, YStack, Text, XStack } from 'tamagui'
+import { Button, Input, Text, YStack, XStack, Stack } from 'tamagui'
 import { useAuth } from '../../src/contexts/AuthContext'
 import { SocialAuthButtons } from './SocialAuthButtons'
 import EyeIcon from '../icons/EyeIcon'
@@ -16,72 +16,77 @@ export function LoginForm({ onRegisterPress }: LoginFormProps) {
 
     const handleLogin = async () => {
         try {
-            // Implement your login logic here
-            // const response = await loginAPI(email, password)
-            // if successful:
-            login('dummy-token') // Replace with actual token
+            login('dummy-token')
         } catch (error) {
             console.error('Login failed:', error)
         }
     }
 
     return (
-        <YStack space="$4" w="100%">
-            <Text ta="center" fow="800" fos="$8">
-                Login
-            </Text>
-            <Input
-                size="$5"
-                placeholder="Email"
-                keyboardType="email-address"
-                autoCapitalize="none"
-                value={email}
-                onChangeText={setEmail}
-            />
-            <XStack ai="center" maxWidth="100%">
+        <YStack f={1} w="100%">
+            <Stack backgroundColor="#272835" p="$4" h="30%" jc="center">
+                <Text fow="800" fos="$10" top="$5"  color="white">
+                    Login
+                </Text>
+                <Text fow="800" fos="$8" top="$10" color="white">
+                    Welcome back!
+                </Text>
+            </Stack>
+            <YStack f={1} space="$4" p="$4">
                 <Input
-                    flex={1}
                     size="$5"
-                    placeholder="Password"
-                    secureTextEntry={!passwordVisible}
-                    value={password}
-                    onChangeText={setPassword}
+                    placeholder="Email"
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                    value={email}
+                    onChangeText={setEmail}
                 />
-                <Button
-                    chromeless
-                    paddingHorizontal="$2"
-                    marginLeft="$-8"
-                    position="absolute"
-                    right={0}
-                    onPress={() => setPasswordVisible(!passwordVisible)}
+                <XStack ai="center" maxWidth="100%">
+                    <Input
+                        flex={1}
+                        size="$5"
+                        placeholder="Password"
+                        secureTextEntry={!passwordVisible}
+                        value={password}
+                        onChangeText={setPassword}
+                    />
+                    <Button
+                        chromeless
+                        paddingHorizontal="$2"
+                        marginLeft="$-8"
+                        position="absolute"
+                        right={0}
+                        onPress={() => setPasswordVisible(!passwordVisible)}
+                    >
+                        <EyeIcon visible={passwordVisible} />
+                    </Button>
+                </XStack>
+                <Text
+                    color="$gray12"
+                    ta="center"
+                    fos="$5"
+                    onPress={() => console.log('Forgot password')}
                 >
-                    <EyeIcon visible={passwordVisible} />
+                    Forgot Password?
+                </Text>
+                <Button
+                    backgroundColor="#272835"
+                    color="white"
+                    onPress={handleLogin}
+                >
+                    Login
                 </Button>
-            </XStack>
-            <Text
-                color="$gray11"
-                ta="center"
-                onPress={() => console.log('Forgot password')}
-            >
-                Forgot Password?
-            </Text>
-            <Button
-                backgroundColor="$red10Light"
-                color="white"
-                onPress={handleLogin}
-            >
-                Login
-            </Button>
-            <Button
-                backgroundColor="white"
-                borderColor="$gray5"
-                borderWidth={1}
-                color="black"
-                onPress={onRegisterPress}
-            >
-                Don't have an account? Register
-            </Button>
-            <SocialAuthButtons />
+                <Button
+                    backgroundColor="white"
+                    borderColor="$gray5"
+                    borderWidth={1}
+                    color="black"
+                    onPress={onRegisterPress}
+                >
+                    Don't have an account? Register
+                </Button>
+                <SocialAuthButtons />
+            </YStack>
         </YStack>
     )
 } 
