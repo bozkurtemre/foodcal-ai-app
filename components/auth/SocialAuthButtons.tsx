@@ -1,7 +1,7 @@
 import { Button, YStack, Text, XStack, Stack } from 'tamagui'
+import * as WebBrowser from 'expo-web-browser'
 import AppleIcon from '../icons/AppleIcon'
 import GoogleIcon from '../icons/GoogleIcon'
-import * as WebBrowser from 'expo-web-browser'
 import { useAuth } from '../../src/contexts/AuthContext'
 
 type Provider = 'google' | 'apple'
