@@ -25,10 +25,10 @@ export function LoginForm({ onRegisterPress }: LoginFormProps) {
     return (
         <YStack f={1} w="100%">
             <Stack backgroundColor="#272835" p="$4" h="30%" jc="center">
-                <Text fow="800" fos="$10" top="$5"  color="white">
+                <Text fontFamily="ClashDisplay-Bold" fos="$10" top="$5"  color="white">
                     Login
                 </Text>
-                <Text fow="800" fos="$8" top="$10" color="white">
+                <Text fos="$8" top="$10" color="white">
                     Welcome back!
                 </Text>
             </Stack>
