@@ -1,11 +1,26 @@
-import { Text, View } from 'tamagui'
+import { Button, Text, View } from 'tamagui'
+import { useAuth } from '../../src/contexts/AuthContext'
 
 export default function TabTwoScreen() {
+  const { logout } = useAuth()
+
+  const handleLogout = async () => {
+    try {
+      logout()
+    } catch (error) {
+      console.error('Login failed:', error)
+    }
+  }
+
   return (
     <View flex={1} alignItems="center" justifyContent="center" bg="$gray5">
-      <Text fontSize={20} color="black">
-        Tab Two
-      </Text>
+      <Button
+        backgroundColor="$red10Light"
+        color="white"
+        onPress={handleLogout}
+      >
+        Logout
+      </Button>
     </View>
   )
 }
