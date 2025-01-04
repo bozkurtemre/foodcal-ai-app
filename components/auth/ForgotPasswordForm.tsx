@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button, Input, Text, YStack, XStack, Stack } from 'tamagui'
+import { Button, Input, Text, YStack, Stack } from 'tamagui'
 import { useAuth } from '../../src/contexts/AuthContext'
 
 interface ForgotPasswordFormProps {
