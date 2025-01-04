@@ -88,7 +88,7 @@ export function LoginForm({ onRegisterPress, onForgotPasswordPress }: LoginFormP
                     color="black"
                     onPress={onRegisterPress}
                     pressStyle={{
-                        backgroundColor: "white",
+                        backgroundColor: "$gray2",
                         opacity: 1
                     }}
                 >

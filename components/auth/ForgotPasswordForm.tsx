@@ -55,7 +55,7 @@ export function ForgotPasswordForm({ onLoginPress }: ForgotPasswordFormProps) {
                     color="black"
                     onPress={onLoginPress}
                     pressStyle={{
-                        backgroundColor: "white",
+                        backgroundColor: "$gray2",
                         opacity: 1
                     }}
                 >

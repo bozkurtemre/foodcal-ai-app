@@ -47,7 +47,7 @@ export function SocialAuthButtons() {
                 color="black"
                 onPress={() => handleSocialLogin('google')}
                 pressStyle={{
-                    backgroundColor: "#272835",
+                    backgroundColor: "$gray2",
                     opacity: 1
                 }}
             >

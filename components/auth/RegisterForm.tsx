@@ -120,7 +120,7 @@ export function RegisterForm({ onLoginPress }: RegisterFormProps) {
                     color="black"
                     onPress={onLoginPress}
                     pressStyle={{
-                        backgroundColor: "white",
+                        backgroundColor: "$gray2",
                         opacity: 1
                     }}
                 >
