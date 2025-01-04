@@ -1,6 +1,5 @@
-import { Tabs } from 'expo-router'
+import { Tabs, Redirect } from 'expo-router'
 import { useTheme } from 'tamagui'
-import { Redirect } from 'expo-router'
 import { AudioWaveform, Home } from '@tamagui/lucide-icons'
 import { useAuth } from '../../src/contexts/AuthContext'
 
@@ -17,7 +16,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: theme.red10Light.val,
+        tabBarActiveTintColor: "#272835",
         tabBarStyle: {
           backgroundColor: theme.background.val,
           borderTopColor: theme.borderColor.val,

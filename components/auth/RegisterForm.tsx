@@ -33,15 +33,15 @@ export function RegisterForm({ onLoginPress }: RegisterFormProps) {
 
     return (
         <YStack f={1} w="100%">
-            <Stack backgroundColor="#272835" p="$4" h="30%" jc="center">
-                <Text fontFamily="ClashDisplay-Bold" fos="$10" top="$5" color="white">
+            <Stack backgroundColor="#272835" p="$4" h="25%" jc="center">
+                <Text fontFamily="ClashDisplay-Bold" fos="$9" top="$4" color="white">
                     Register
                 </Text>
-                <Text fos="$8" top="$10" color="white">
+                <Text fos="$6" top="$6" color="white">
                     Create an account!
                 </Text>
             </Stack>
-            <YStack f={1} space="$4" p="$4" pt="$6">
+            <YStack f={1} space="$4" p="$4" pt="$4">
                 <Input
                     size="$5"
                     placeholder="Name"

@@ -1,4 +1,4 @@
-import { Button, Text, View } from 'tamagui'
+import { Button, View } from 'tamagui'
 import { useAuth } from '../../src/contexts/AuthContext'
 
 export default function TabTwoScreen() {

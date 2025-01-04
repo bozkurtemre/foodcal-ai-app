@@ -20,11 +20,11 @@ export function ForgotPasswordForm({ onLoginPress }: ForgotPasswordFormProps) {
 
     return (
         <YStack f={1} w="100%">
-            <Stack backgroundColor="#272835" p="$4" h="30%" jc="center">
-                <Text fontFamily="ClashDisplay-Bold" fos="$10" top="$3" color="white">
+            <Stack backgroundColor="#272835" p="$4" h="25%" jc="center">
+                <Text fontFamily="ClashDisplay-Bold" fos="$9" top="$4" color="white">
                     Forgot Password
                 </Text>
-                <Text fos="$8" top="$8" color="white">
+                <Text fos="$6" top="$6" color="white">
                     No worries, we got you!
                 </Text>
             </Stack>

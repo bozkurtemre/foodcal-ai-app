@@ -7,7 +7,7 @@ import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
 import { useTheme } from 'tamagui'
 import Provider from './Provider'
-import { AuthProvider } from '../src/contexts/AuthContext'
+import { AuthProvider, useAuth } from '../src/contexts/AuthContext'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -56,9 +56,11 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
 
 function RootLayoutNav() {
   const theme = useTheme()
+  const { isAuthenticated } = useAuth()
+
   return (
     <ThemeProvider value={DefaultTheme}>
-      <StatusBar barStyle={'light-content'} />
+      <StatusBar barStyle={isAuthenticated ? 'dark-content' : 'light-content'} />
       <Stack
         screenOptions={{
           headerShown: false,
