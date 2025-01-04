@@ -1,5 +1,5 @@
 import { Tabs, Redirect } from 'expo-router'
-import { useTheme } from 'tamagui'
+import { useTheme, View } from 'tamagui'
 import { Home, ChartColumnBig, Settings, Plus } from '@tamagui/lucide-icons'
 import { TouchableOpacity, StyleSheet } from 'react-native'
 import { useAuth } from '../../src/contexts/AuthContext'
@@ -14,6 +14,7 @@ export default function TabLayout() {
   }
 
   return (
+    <View style={{ flex: 1 }}>
     <Tabs
       screenOptions={{
         headerShown: false,
@@ -66,8 +67,15 @@ export default function TabLayout() {
             </TouchableOpacity>
           ),
         }}
+        listeners={{
+          tabPress: (e) => {
+            e.preventDefault()
+            console.log('Plus button pressed')
+          },
+        }}
       />
-    </Tabs>
+      </Tabs>
+    </View>
   )
 }
 
