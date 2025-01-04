@@ -44,10 +44,12 @@ export function SocialAuthButtons() {
                 icon={<GoogleIcon />}
                 fontSize="$5"
                 backgroundColor="white"
-                borderColor="$gray5"
-                borderWidth={1}
                 color="black"
                 onPress={() => handleSocialLogin('google')}
+                pressStyle={{
+                    backgroundColor: "#272835",
+                    opacity: 1
+                }}
             >
                 Continue with Google
             </Button>
@@ -57,6 +59,10 @@ export function SocialAuthButtons() {
                 backgroundColor="black"
                 color="white"
                 onPress={() => handleSocialLogin('apple')}
+                pressStyle={{
+                    backgroundColor: "black",
+                    opacity: 1
+                }}
             >
                 Continue with Apple
             </Button>

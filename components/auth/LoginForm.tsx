@@ -75,16 +75,22 @@ export function LoginForm({ onRegisterPress, onForgotPasswordPress }: LoginFormP
                     backgroundColor="#272835"
                     color="white"
                     onPress={handleLogin}
+                    pressStyle={{
+                        backgroundColor: "#272835",
+                        opacity: 1
+                    }}
                 >
                     Login
                 </Button>
                 <Button
                     fontSize="$5"
                     backgroundColor="white"
-                    borderColor="$gray5"
-                    borderWidth={1}
                     color="black"
                     onPress={onRegisterPress}
+                    pressStyle={{
+                        backgroundColor: "white",
+                        opacity: 1
+                    }}
                 >
                     Don't have an account? Register
                 </Button>

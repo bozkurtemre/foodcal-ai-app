@@ -42,16 +42,22 @@ export function ForgotPasswordForm({ onLoginPress }: ForgotPasswordFormProps) {
                     backgroundColor="#272835"
                     color="white"
                     onPress={handleForgotPassword}
+                    pressStyle={{
+                        backgroundColor: "#272835",
+                        opacity: 1
+                    }}
                 >
                     Send
                 </Button>
                 <Button
                     fontSize="$5"
                     backgroundColor="white"
-                    borderColor="$gray5"
-                    borderWidth={1}
                     color="black"
                     onPress={onLoginPress}
+                    pressStyle={{
+                        backgroundColor: "white",
+                        opacity: 1
+                    }}
                 >
                     Back to Login
                 </Button>

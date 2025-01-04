@@ -107,16 +107,22 @@ export function RegisterForm({ onLoginPress }: RegisterFormProps) {
                     backgroundColor="#272835"
                     color="white"
                     onPress={handleRegister}
+                    pressStyle={{
+                        backgroundColor: "#272835",
+                        opacity: 1
+                    }}
                 >
                     Register
                 </Button>
                 <Button
                     fontSize="$5"
                     backgroundColor="white"
-                    borderColor="$gray5"
-                    borderWidth={1}
                     color="black"
                     onPress={onLoginPress}
+                    pressStyle={{
+                        backgroundColor: "white",
+                        opacity: 1
+                    }}
                 >
                     Already have an account? Login
                 </Button>
