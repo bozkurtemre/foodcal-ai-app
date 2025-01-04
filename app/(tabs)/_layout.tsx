@@ -1,6 +1,7 @@
 import { Tabs, Redirect } from 'expo-router'
 import { useTheme } from 'tamagui'
-import { Home, Settings } from '@tamagui/lucide-icons'
+import { Home, ChartColumnBig, Settings, Plus } from '@tamagui/lucide-icons'
+import { TouchableOpacity, StyleSheet } from 'react-native'
 import { useAuth } from '../../src/contexts/AuthContext'
 
 export default function TabLayout() {
@@ -21,7 +22,17 @@ export default function TabLayout() {
           backgroundColor: theme.background.val,
           borderTopColor: theme.borderColor.val,
           display: isAuthenticated ? 'flex' : 'none',
+          height: 80,
         },
+        tabBarIconStyle: {
+          marginTop: 4,
+          marginBottom: 2,
+        },
+        tabBarLabelStyle: {
+          marginTop: 2,
+          fontFamily: 'ClashDisplay-Regular',
+          fontSize: 12
+        }
       }}
     >
       <Tabs.Screen
@@ -32,12 +43,50 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="analytics"
+        options={{
+          title: 'Analytics',
+          tabBarIcon: ({ color }) => <ChartColumnBig color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="settings"
         options={{
           title: 'Settings',
           tabBarIcon: ({ color }) => <Settings color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="plus"
+        options={{
+          title: '',
+          tabBarIcon: () => (
+            <TouchableOpacity style={styles.plusButton}>
+              <Plus color="white" size={32} />
+            </TouchableOpacity>
+          ),
+        }}
+      />
     </Tabs>
   )
 }
+
+const styles = StyleSheet.create({
+  plusButton: {
+    backgroundColor: '#272835',
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  }
+})
