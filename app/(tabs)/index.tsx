@@ -3,7 +3,7 @@ import { Anchor, H2, Paragraph, XStack, YStack } from 'tamagui'
 
 export default function TabOneScreen() {
   return (
-    <YStack f={1} ai="center" gap="$8" px="$10" pt="$15" bg="$gray5">
+    <YStack f={1} ai="center" gap="$8" px="$10" pt="$15">
       <H2>Foodcal AI</H2>
 
       <XStack ai="center" jc="center" fw="wrap" gap="$1.5" pos="absolute" b="$8">

@@ -13,7 +13,7 @@ export default function TabTwoScreen() {
   }
 
   return (
-    <View flex={1} alignItems="center" justifyContent="center" bg="$gray5">
+    <View flex={1} alignItems="center" justifyContent="center">
       <Button
         backgroundColor="$red10Light"
         color="white"
