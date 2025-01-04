@@ -28,7 +28,7 @@ export function ForgotPasswordForm({ onLoginPress }: ForgotPasswordFormProps) {
                     No worries, we got you!
                 </Text>
             </Stack>
-            <YStack f={1} space="$4" p="$4">
+            <YStack f={1} space="$4" p="$4" pt="$6">
                 <Input
                     size="$5"
                     placeholder="Email"
