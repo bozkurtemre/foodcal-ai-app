@@ -1,7 +1,7 @@
 import { Button, View } from 'tamagui'
 import { useAuth } from '../../src/contexts/AuthContext'
 
-export default function TabTwoScreen() {
+export default function TabSettingsScreen() {
   const { logout } = useAuth()
 
   const handleLogout = async () => {
@@ -15,9 +15,13 @@ export default function TabTwoScreen() {
   return (
     <View flex={1} alignItems="center" justifyContent="center">
       <Button
-        backgroundColor="$red10Light"
+        backgroundColor="#272835"
         color="white"
         onPress={handleLogout}
+        pressStyle={{
+          backgroundColor: "#272835",
+          opacity: 1
+        }}
       >
         Logout
       </Button>

@@ -1,6 +1,6 @@
 import { Tabs, Redirect } from 'expo-router'
 import { useTheme } from 'tamagui'
-import { AudioWaveform, Home } from '@tamagui/lucide-icons'
+import { Home, Settings } from '@tamagui/lucide-icons'
 import { useAuth } from '../../src/contexts/AuthContext'
 
 export default function TabLayout() {
@@ -32,10 +32,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="settings"
         options={{
-          title: 'Two',
-          tabBarIcon: ({ color }) => <AudioWaveform color={color} />,
+          title: 'Settings',
+          tabBarIcon: ({ color }) => <Settings color={color} />,
         }}
       />
     </Tabs>
