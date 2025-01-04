@@ -5,6 +5,7 @@ interface AuthContextType {
     isAuthenticated: boolean;
     login: (token: string) => void;
     register: (token: string) => void;
+    forgotPassword: (email: string) => void;
     logout: () => void;
 }
 
@@ -25,6 +26,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         router.replace('/(tabs)');
     };
 
+    const forgotPassword = (email: string) => {
+        console.log('Forgot password for email:', email);
+    };
+
     const logout = () => {
         setIsAuthenticated(false);
         // Clear token from secure storage here
@@ -32,7 +37,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     };
 
     return (
-        <AuthContext.Provider value={{ isAuthenticated, login, register, logout }}>
+        <AuthContext.Provider value={{ isAuthenticated, login, register, forgotPassword, logout }}>
             {children}
         </AuthContext.Provider>
     );

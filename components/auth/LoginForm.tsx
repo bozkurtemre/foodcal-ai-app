@@ -6,9 +6,10 @@ import EyeIcon from '../icons/EyeIcon'
 
 interface LoginFormProps {
     onRegisterPress: () => void
+    onForgotPasswordPress: () => void
 }
 
-export function LoginForm({ onRegisterPress }: LoginFormProps) {
+export function LoginForm({ onRegisterPress, onForgotPasswordPress }: LoginFormProps) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordVisible, setPasswordVisible] = useState(false)
@@ -65,7 +66,7 @@ export function LoginForm({ onRegisterPress }: LoginFormProps) {
                     color="$gray12"
                     ta="center"
                     fos="$5"
-                    onPress={() => console.log('Forgot password')}
+                    onPress={onForgotPasswordPress}
                 >
                     Forgot Password?
                 </Text>

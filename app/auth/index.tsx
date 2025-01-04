@@ -4,10 +4,11 @@ import { YStack } from 'tamagui'
 import { useAuth } from '../../src/contexts/AuthContext'
 import { LoginForm } from '../../components/auth/LoginForm'
 import { RegisterForm } from '../../components/auth/RegisterForm'
+import { ForgotPasswordForm } from '../../components/auth/ForgotPasswordForm'
 
 export default function Auth() {
     const { isAuthenticated } = useAuth()
-    const [isLogin, setIsLogin] = useState(true)
+    const [currentScreen, setCurrentScreen] = useState<'login' | 'register' | 'forgotPassword'>('login')
 
     if (isAuthenticated) {
         return <Redirect href="/(tabs)" />
@@ -15,10 +16,13 @@ export default function Auth() {
 
     return (
         <YStack f={1} jc="center" ai="center" space="$4">
-            {isLogin ? (
-                <LoginForm onRegisterPress={() => setIsLogin(false)} />
+            {currentScreen === 'login' ? (
+                <LoginForm onRegisterPress={() => setCurrentScreen('register')}
+                    onForgotPasswordPress={() => setCurrentScreen('forgotPassword')} />
+            ) : currentScreen === 'register' ? (
+                <RegisterForm onLoginPress={() => setCurrentScreen('login')} />
             ) : (
-                <RegisterForm onLoginPress={() => setIsLogin(true)} />
+                <ForgotPasswordForm onLoginPress={() => setCurrentScreen('login')} />
             )}
         </YStack>
     )
