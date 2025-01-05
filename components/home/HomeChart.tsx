@@ -1,5 +1,5 @@
 import type { CardProps } from 'tamagui';
-import { Card, H2, Paragraph, Tooltip, XStack, YStack } from 'tamagui';
+import { Card, H2, Paragraph, XStack, YStack } from 'tamagui';
 
 export default function HomeChart(props: CardProps) {
     const calorieData = {
@@ -21,19 +21,12 @@ export default function HomeChart(props: CardProps) {
             <XStack alignItems="flex-end" gap="$4" ml="$6" mb="$4" height={100}>
                 {Object.entries(calorieData).map(([day, calories]) => (
                     <YStack key={day} alignItems="center">
-                        <Tooltip>
-                            <Tooltip.Trigger>
-                                <YStack
-                                    width={25}
-                                    height={Math.min(100, (calories / 2500) * 100)} // Scale height
-                                    backgroundColor="white"
-                                    borderRadius={5}
-                                />
-                            </Tooltip.Trigger>
-                            <Tooltip.Content>
-                                <Paragraph size="$4">{calories} Kcal</Paragraph>
-                            </Tooltip.Content>
-                        </Tooltip>
+                        <YStack
+                            width={25}
+                            height={Math.min(100, (calories / 2500) * 100)}
+                            backgroundColor="white"
+                            borderRadius={5}
+                        />
                         <Paragraph color="white" pt="$2" size="$4">
                             {day}
                         </Paragraph>
