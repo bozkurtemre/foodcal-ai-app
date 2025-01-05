@@ -1,44 +1,12 @@
 import { ExternalLink } from '@tamagui/lucide-icons'
-import { Anchor, H2, Paragraph, XStack, YStack } from 'tamagui'
+import { Anchor, Paragraph, XStack, YStack } from 'tamagui'
+import HomeChart from '../../components/home/HomeChart'
 
 export default function TabHomeScreen() {
   return (
-    <YStack f={1} ai="center" gap="$8" px="$10" pt="$15">
-      <H2>Foodcal AI</H2>
-
-      <XStack ai="center" jc="center" fw="wrap" gap="$1.5" pos="absolute" b="$8">
-        <Paragraph fos="$5">Add</Paragraph>
-
-        <Paragraph fos="$5" px="$2" py="$1" col="$blue10" bg="$blue5">
-          tamagui.config.ts
-        </Paragraph>
-
-        <Paragraph fos="$5">to root and follow the</Paragraph>
-
-        <XStack
-          ai="center"
-          gap="$1.5"
-          px="$2"
-          py="$1"
-          br="$3"
-          bg="$purple5"
-          hoverStyle={{ bg: '$purple6' }}
-          pressStyle={{ bg: '$purple4' }}
-        >
-          <Anchor
-            href="https://tamagui.dev/docs/core/configuration"
-            textDecorationLine="none"
-            col="$purple10"
-            fos="$5"
-          >
-            Configuration guide
-          </Anchor>
-          <ExternalLink size="$1" col="$purple10" />
-        </XStack>
-
-        <Paragraph fos="$5" ta="center">
-          to configure your themes and tokens.
-        </Paragraph>
+    <YStack f={1} gap="$8">
+      <XStack $sm={{ flexDirection: 'column' }} pt="$12">
+        <HomeChart size="$5" height="$20" ml="$4" mr="$4" />
       </XStack>
     </YStack>
   )

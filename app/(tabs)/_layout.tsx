@@ -23,10 +23,10 @@ export default function TabLayout() {
           backgroundColor: theme.background.val,
           borderTopColor: theme.borderColor.val,
           display: isAuthenticated ? 'flex' : 'none',
-          height: 80,
+          height: 100,
         },
         tabBarIconStyle: {
-          marginTop: 4,
+          marginTop: 10,
           marginBottom: 2,
         },
         tabBarLabelStyle: {
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     borderRadius: 28,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 35,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
